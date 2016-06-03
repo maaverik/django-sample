@@ -10,6 +10,8 @@ def index(request):
 		'latest_polls': latest_polls,
 		})
 	return HttpResponse(template.render(context))
+	#context = {'latest_polls': latest_polls}
+	#return render(request, 'polls/index.html', context)
 def detail(request, poll_id):
 	return HttpResponse("You're looking at poll %s." % poll_id)
 def results(request, poll_id):
